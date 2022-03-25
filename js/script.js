@@ -42,7 +42,7 @@ const personalMovieDB ={
         const genres =[];
         for(let i =0; i<3; i++){
            genres[i]=prompt(`Ваш любимый жанр под номером ${i+1}`,'');
-            if(genres[i]!= null && genres.length>0){
+            if(genres[i]!= null && genres.length>0 && genres[i]!= ''){
                 personalMovieDB.gennres[i]=genres[i];
             } else {
                 i--;
@@ -58,9 +58,9 @@ const personalMovieDB ={
         if(personalMovieDB.count < 10 && personalMovieDB.count!=0){
         console.log(`Просмотрено довольно мало фильмов. Ви просмотрели ${personalMovieDB.count} фильмов`);
         } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30 ){
-            console.log('Вы классический зритель. Ви просмотрели ${personalMovieDB.count} фильмов');
+            console.log(`Вы классический зритель. Ви просмотрели ${personalMovieDB.count} фильмов`);
         }else if (personalMovieDB.count > 30){
-            console.log('Вы киноман. Ви просмотрели ${personalMovieDB.count} фильмов');
+            console.log(`Вы киноман. Ви просмотрели ${personalMovieDB.count} фильмов`);
         }else {
             console.log("Произошла ошибка");
         }
@@ -72,5 +72,5 @@ personalMovieDB.start();
 personalMovieDB.rememberMyFilms();
 personalMovieDB.writeYourGenres();
 personalMovieDB.MyFilmRate();
-personalMovieDB.toggleVisibleMyDB(); 
+//personalMovieDB.toggleVisibleMyDB(); 
 personalMovieDB.showMyDB(personalMovieDB.privat);
